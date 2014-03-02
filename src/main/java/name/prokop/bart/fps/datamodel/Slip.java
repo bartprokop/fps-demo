@@ -136,7 +136,9 @@ public class Slip {
                 JSONObject slipPaymentJson = slipPaymentsJson.getJSONObject(i);
                 SlipPayment slipPayment = new SlipPayment();
                 slipPayment.setAmount(slipPaymentJson.getDouble("amount"));
-                slipPayment.setName(slipPaymentJson.getString("name"));
+                if (slipPaymentJson.has("name")) {
+                    slipPayment.setName(slipPaymentJson.getString("name"));
+                }
                 slipPayment.setType(SlipPayment.PaymentType.valueOf(slipPaymentJson.getString("type")));
                 addPayment(slipPayment);
             }
@@ -322,7 +324,6 @@ public class Slip {
             sum += slipLines.get(i).getTotal();
         }
         return BPMath.roundCurrency(sum);
-
 
     }
 
