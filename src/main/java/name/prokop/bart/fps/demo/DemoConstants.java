@@ -8,21 +8,12 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package name.prokop.bart.fps.datamodel;
+package name.prokop.bart.fps.demo;
 
-/**
- *
- * @author prokob01
- */
-public class CustomerSamples {
+public class DemoConstants {
 
-    public static Slip example1() {
-        Slip slip = new Slip();
-        slip.setReference("R-k 0123456789");
-        slip.setCashbox("XX99");
-        slip.setCashierName("Test Testowy");
-        slip.addLine("Żetony", 1, 31, VATRate.VAT23);
-        slip.addPayment(SlipPayment.PaymentType.Cash, 31.0, null);
-        return slip;
-    }
+    public static final String API_KEY_HEADER = "API-Key";
+    public static final String API_KEY = "c6406622-4dab-47d8-9034-cdc7e69ada51";
+    public static final String URL_BASE = "https://natanedwin.appspot.com/api/fps";
+
 }
