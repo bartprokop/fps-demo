@@ -3,11 +3,8 @@
  */
 package name.prokop.bart.fps.demo;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
-import java.net.URLConnection;
 import javax.net.ssl.HttpsURLConnection;
 
 public class ExampleBadApiKey {
@@ -30,12 +27,6 @@ public class ExampleBadApiKey {
         }
 
         System.out.println("response code: " + conn.getResponseCode());
-        System.out.println("Response from the server:");
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"))) {
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                System.out.println(inputLine);
-            }
-        }
+        conn.disconnect();
     }
 }

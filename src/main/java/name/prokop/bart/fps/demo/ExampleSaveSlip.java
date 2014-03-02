@@ -13,7 +13,7 @@ import javax.net.ssl.HttpsURLConnection;
 import name.prokop.bart.fps.datamodel.CustomerSamples;
 import name.prokop.bart.fps.datamodel.Slip;
 
-public class Example1 {
+public class ExampleSaveSlip {
 
     public static void main(String... args) throws Exception {
         String urlString = DemoConstants.URL_BASE;
