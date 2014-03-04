@@ -1,6 +1,12 @@
-/**
- * Ten przykład pokazuje jak odebrać paragon fiskalny z serwera. W ten sposób
- * paragon do wydruku pobiera applet.
+/*
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+ * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package name.prokop.bart.fps.demo;
 
@@ -13,6 +19,10 @@ import javax.net.ssl.HttpsURLConnection;
 import name.prokop.bart.fps.datamodel.Slip;
 import org.json.JSONObject;
 
+/**
+ * Ten przykład pokazuje jak odebrać paragon fiskalny z serwera. W ten sposób
+ * paragon do wydruku pobiera applet.
+ */
 public class ExampleReadSlip {
 
     public static void main(String... args) throws Exception {
@@ -46,6 +56,6 @@ public class ExampleReadSlip {
         JSONObject jsono = new JSONObject(sb.toString());
         System.out.println("Deserializowany JSON: " + jsono.toString());
         Slip slip = new Slip(jsono);
-        System.out.println("Nr paragonu: "+slip.getReference());
+        System.out.println("Nr paragonu: " + slip.getReference());
     }
 }

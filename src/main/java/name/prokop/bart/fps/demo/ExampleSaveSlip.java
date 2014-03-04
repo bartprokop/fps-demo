@@ -1,6 +1,12 @@
-/**
- * Ten przykład pokazuje jak wysłać paragon fiskalny do serwera, skąd zostanie
- * oddrukowany
+/*
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+ * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package name.prokop.bart.fps.demo;
 
@@ -13,6 +19,10 @@ import javax.net.ssl.HttpsURLConnection;
 import name.prokop.bart.fps.datamodel.CustomerSamples;
 import name.prokop.bart.fps.datamodel.Slip;
 
+/**
+ * Ten przykład pokazuje jak wysłać paragon fiskalny do serwera, skąd zostanie
+ * oddrukowany
+ */
 public class ExampleSaveSlip {
 
     public static void main(String... args) throws Exception {
