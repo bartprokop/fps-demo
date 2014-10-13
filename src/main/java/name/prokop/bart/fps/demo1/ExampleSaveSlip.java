@@ -42,6 +42,7 @@ public class ExampleSaveSlip {
         conn.setDoOutput(true);
         try (OutputStream outputStream = conn.getOutputStream()) {
             Slip slip = CustomerSamples.example1();
+            slip = Slip.getOneCentSlip();
             String slipAsJSON = slip.toJSONObject().toString(3);
             System.out.println("To be send:\n" + slipAsJSON);
             System.out.println("-----------------------------");
